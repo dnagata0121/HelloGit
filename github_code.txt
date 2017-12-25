@@ -1,0 +1,38 @@
+
+###
+#ローカルリポジトリの作成
+mkdir github
+cd github
+mkdir gittest
+cd gittest
+git init
+
+#インデックスの追加
+git add test.txt
+
+#コミット
+git commit -m "変更点などのコメント"
+
+#データのプッシュ
+git remote add origin https://github.com/dnagata0121/HelloGit.git
+git push origin master
+
+
+###
+#ブランチの作成
+git branch testbranch
+
+#ブランチの確認
+git branch
+
+#参照するブランチの変更
+git checkout testbranch
+
+
+###
+#取り込み先のブランチを確認
+git checkout master
+#ブランチの結合
+git merge testbranch
+#結合情報の送信
+git push origin master
